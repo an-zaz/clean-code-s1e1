@@ -10,7 +10,7 @@ body {
   display: block;
   text-align: right;
 }
-.header img {
+.matrix-img {
   width: 100%;
 }
 .header .details-link {
@@ -88,7 +88,7 @@ label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+.new-task {
   width: 318px;
 }
 p > button:hover {
@@ -121,21 +121,21 @@ li > label {
 li >    input[type="text"] {
   width: 226px
 }
-li > button.delete-btn:hover {
+.delete-btn:hover {
   color: #cf2323;
 }
-button.delete-btn img {
+.delete-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete-btn img:hover {
+.delete-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
-  text-decoration: line-through
+#completed-tasks .task-description.description-text {
+  text-decoration: line-through;
   color: #888;
 }
 
@@ -144,15 +144,29 @@ ul li input[type=text] {
   display:none
 }
 
-ul li.edit-mode input[type=text] {
+.edit-mode .task-description.description-field{
   display:inline-block;
   width:224px
 }
 
-ul li.edit-mode label {
+
+.edit-mode .task-description.description-text{
   display:none;
 }
 
 .adding-section {
   margin: 1rem 0;
+}
+
+img {
+  display: block;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
 }
