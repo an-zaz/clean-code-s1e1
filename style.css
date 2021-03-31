@@ -1,8 +1,43 @@
+/*DEFAULT styles!*/
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+h2 {
+  list-style: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+
 /* Basic Style */
-body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
+}
+
+.page-title {
+  overflow: hidden;
+  margin: 0;
+  width: 0;
+  height: 0;
 }
 
 .header {
@@ -42,22 +77,7 @@ body {
   display: flex;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li,
-h2 {
-  list-style: none;
-}
-
-input,
-button {
-  outline: none;
-}
-
-button {
+.btn {
   width: 60px;
   font-family: Lato, sans-serif;
   font-size: 15px;
@@ -67,13 +87,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-h2,
-label[for="new-task"] {
+.section-title,
+.adding-section-title {
   padding: 30px 0 10px;
   margin: 0;
   border-bottom: 2px solid #333;
@@ -83,7 +103,9 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task-description.description-field,
+.task-description.description-edit,
+.task-description.new-task {
   margin: 0;
   height: 21px;
   padding: 0 9px;
@@ -96,12 +118,14 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task-description.description-field:focus,
+.task-description.description-edit:focus,
+.task-description.new-task:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.adding-section-title {
   display: block;
   margin: 0 0 20px;
 }
@@ -110,12 +134,9 @@ label[for="new-task"] {
   width: 318px;
 }
 
-p > button:hover {
-  color: #0fc57c;
-}
-
 /* Task list */
-li {
+.list-item,
+.list-item.edit-mode {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,26 +145,28 @@ li {
   border-bottom: 1px solid #eee;
 }
 
-li > * {
+.list-item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.list-item > .task-description {
   box-sizing: border-box;
   width: 226px;
   padding-left: 10px;
   font-size: 18px;
 }
 
-li > input[type="text"] {
+.task-description.description-field,
+.task-description.description-edit {
+  display: none;
   width: 226px;
 }
 
-.delete-btn:hover {
+.btn.delete-btn:hover {
   color: #cf2323;
 }
 
@@ -164,9 +187,6 @@ li > input[type="text"] {
 }
 
 /* Edit Task */
-ul li input[type=text] {
-  display: none;
-}
 
 .edit-mode .task-description.description-field,
 .edit-mode .task-description.description-edit {
@@ -182,26 +202,8 @@ ul li input[type=text] {
   margin: 1rem 0;
 }
 
-img {
-  display: block;
-}
-
-input {
-  box-sizing: border-box;
-}
-
-.delete-btn {
+.btn.delete-btn {
   display: flex;
   justify-content: center;
 }
 
-figure {
-  margin: 0;
-}
-
-h1 {
-  overflow: hidden;
-  margin: 0;
-  width: 0;
-  height: 0;
-}
