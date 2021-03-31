@@ -4,24 +4,6 @@ ul {
   padding: 0;
 }
 
-li,
-h2 {
-  list-style: none;
-}
-
-input,
-button {
-  outline: none;
-}
-
-img {
-  display: block;
-}
-
-input {
-  box-sizing: border-box;
-}
-
 figure {
   margin: 0;
 }
@@ -48,6 +30,7 @@ figure {
 }
 
 .matrix-img {
+  display: block;
   width: 100%;
 }
 
@@ -71,6 +54,7 @@ figure {
   display: inline-block;
   width: 56%;
   flex-grow: 1;
+  outline: none;
 }
 
 .new-task-wrapper {
@@ -84,6 +68,7 @@ figure {
   color: #888;
   background: none;
   border: 0;
+  outline: none;
   cursor: pointer;
 }
 
@@ -106,6 +91,7 @@ figure {
 .task-description.description-field,
 .task-description.description-edit,
 .task-description.new-task {
+  box-sizing: border-box;
   margin: 0;
   height: 21px;
   padding: 0 9px;
@@ -143,6 +129,7 @@ figure {
   padding: 20px 0;
   overflow: hidden;
   border-bottom: 1px solid #eee;
+  list-style: none;
 }
 
 .list-item > * {
@@ -151,6 +138,7 @@ figure {
 
 .checkbox {
   margin: 0 10px;
+  outline: none;
 }
 
 .list-item > .task-description {
@@ -171,6 +159,7 @@ figure {
 }
 
 .delete-img {
+  display: block;
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
@@ -192,6 +181,7 @@ figure {
 .edit-mode .task-description.description-edit {
   display: inline-block;
   width: 224px;
+  padding-left: 9px;
 }
 
 .edit-mode .task-description.description-text {
